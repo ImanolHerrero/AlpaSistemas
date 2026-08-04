@@ -8,6 +8,7 @@ import WorkProcess from "./components/WorkProcess.tsx";
 import Partner from "./components/Partner.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Contact from "./components/Contact.tsx";
+import Footer from "./components/Footer.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -18,5 +19,6 @@ createRoot(document.getElementById("root")!).render(
     <WorkProcess />
     <Partner />
     <Contact />
+    <Footer />
   </StrictMode>,
 );
