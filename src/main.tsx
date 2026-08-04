@@ -6,13 +6,17 @@ import WhyChooseUs from "./components/whyChooseUs.tsx";
 import Services from "./components/Services.tsx";
 import WorkProcess from "./components/WorkProcess.tsx";
 import Partner from "./components/Partner.tsx";
+import Navbar from "./components/Navbar.tsx";
+import Contact from "./components/Contact.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <Navbar />
     <Hero />
     <WhyChooseUs />
     <Services />
     <WorkProcess />
     <Partner />
+    <Contact />
   </StrictMode>,
 );
