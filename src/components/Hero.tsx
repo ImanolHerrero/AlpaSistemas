@@ -1,5 +1,5 @@
-import calipsoLogo from "./assets/Calipso-1.avif";
-import alpaLogo from "./assets/alpaLogo.png";
+import calipsoLogo from "../assets/Calipso-1.avif";
+import alpaLogo from "../assets/alpaLogo.png";
 
 function Hero() {
   return (

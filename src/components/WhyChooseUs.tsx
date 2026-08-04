@@ -1,0 +1,71 @@
+import { Briefcase, Cog, Users, TrendingUp } from "lucide-react";
+
+const benefits = [
+  {
+    icon: Briefcase,
+    title: "Consultoría personalizada",
+    description:
+      "Analizamos la realidad de tu empresa para implementar una solución adaptada a tus procesos y objetivos.",
+  },
+  {
+    icon: Cog,
+    title: "Implementación efectiva",
+    description:
+      "Te acompañamos desde la planificación hasta la puesta en marcha del ERP para asegurar una implementación exitosa.",
+  },
+  {
+    icon: Users,
+    title: "Equipo experto",
+    description:
+      "Contamos con consultores especializados en soluciones ERP Full Web, comprometidos con cada proyecto.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Automatización y eficiencia",
+    description:
+      "Optimizá procesos, reducí tareas repetitivas y mejorá la productividad de toda tu organización.",
+  },
+];
+
+export default function WhyChooseUs() {
+  return (
+    <section className="bg-white py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <span className="font-semibold uppercase tracking-widest text-brandColor">
+            ¿Por qué elegir ALPA?
+          </span>
+
+          <h2 className="mt-4 text-4xl font-bold text-slate-900">
+            Experiencia, compromiso y tecnología para potenciar tu negocio.
+          </h2>
+
+          <p className="mt-6 text-lg text-slate-600">
+            Acompañamos a empresas en la implementación de soluciones ERP
+            brindando consultoría, soporte y un seguimiento cercano en cada
+            etapa del proyecto.
+          </p>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          {benefits.map(({ icon: Icon, title, description }) => (
+            <article
+              key={title}
+              className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-brandColor hover:shadow-xl"
+            >
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-brandColor/10 text-brandColor">
+                <Icon size={28} />
+              </div>
+
+              <h3 className="mb-3 text-xl font-semibold text-slate-900">
+                {title}
+              </h3>
+
+              <p className="leading-7 text-slate-600">{description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
