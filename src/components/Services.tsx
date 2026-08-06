@@ -15,11 +15,11 @@ const services = [
       "Mesa de ayuda online con atención rápida y especializada para acompañarte en el uso diario del sistema.",
     items: [
       "Seguimiento de tickets",
-      "Soporte especializado",
-      "WhatsApp",
-      "Email",
-      "Plataforma online",
-      "Documentación",
+      "Resolución ágil",
+      "WhatsApp corporativo",
+      "Email y plataforma online",
+      "Prevención y mejora continua",
+      "Documentación y manuales",
     ],
   },
 ];
