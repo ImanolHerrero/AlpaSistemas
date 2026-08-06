@@ -29,20 +29,20 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white py-24" id="beneficios">
+    <section id="beneficios" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-widest text-brandColor">
+          <span className="font-semibold uppercase tracking-[0.2em] text-brandColor">
             ¿Por qué elegir ALPA?
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-slate-900">
-            Experiencia, compromiso y tecnología para potenciar tu negocio.
+          <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-900">
+            Experiencia, compromiso y tecnología para potenciar tu negocio
           </h2>
 
-          <p className="mt-6 text-lg text-slate-600">
+          <p className="mt-6 text-lg leading-8 text-slate-600">
             Acompañamos a empresas en la implementación de soluciones ERP
-            brindando consultoría, soporte y un seguimiento cercano en cada
+            brindando consultoría, soporte y un seguimiento cercano durante cada
             etapa del proyecto.
           </p>
         </div>
@@ -51,15 +51,16 @@ export default function WhyChooseUs() {
           {benefits.map(({ icon: Icon, title, description }) => (
             <article
               key={title}
-              className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-brandColor hover:shadow-xl"
+              className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brandColor hover:shadow-xl"
             >
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-brandColor/10 text-brandColor">
-                <Icon size={28} />
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-brandColor/10 text-brandColor transition-colors duration-300 group-hover:bg-brandColor">
+                <Icon
+                  size={28}
+                  className="transition-colors duration-300 group-hover:text-white"
+                />
               </div>
 
-              <h3 className="mb-3 text-xl font-semibold text-slate-900">
-                {title}
-              </h3>
+              <h3 className="mb-4 text-xl font-bold text-slate-900">{title}</h3>
 
               <p className="leading-7 text-slate-600">{description}</p>
             </article>

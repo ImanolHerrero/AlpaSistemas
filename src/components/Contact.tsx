@@ -1,11 +1,38 @@
-import { Mail, Phone, User, MapPin, Send } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
+
+const contactItems = [
+  {
+    icon: Mail,
+    label: "Email",
+    content: "info@alpasistemas.com",
+    href: "mailto:info@alpasistemas.com",
+  },
+  {
+    icon: FaWhatsapp,
+    label: "Teléfono / WhatsApp",
+    content: "+54 9 11 3305-6461",
+    href: "https://wa.me/5491133056461",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    content: "ALPA Sistemas",
+    href: "https://www.linkedin.com/company/alpa-sistemas/",
+  },
+  {
+    icon: MapPin,
+    label: "Ubicación",
+    content: "Buenos Aires, Argentina",
+  },
+];
 
 export default function Contact() {
   return (
     <section id="contacto" className="bg-slate-900 py-24 text-white">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          <div>
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="max-w-xl text-center lg:text-left">
             <span className="font-semibold uppercase tracking-[0.2em] text-brandColor">
               Contacto
             </span>
@@ -24,78 +51,63 @@ export default function Contact() {
               href="https://wa.me/5491133056461"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-flex items-center gap-2 rounded-lg bg-brandColor px-6 py-4 font-semibold text-white transition hover:opacity-90"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-brandColor px-6 py-4 font-semibold text-white shadow-xl shadow-brandColor/20 transition duration-300 hover:-translate-y-0.5 hover:opacity-90"
             >
-              <Send size={18} />
-              Escribinos por WhatsApp
+              <FaWhatsapp size={18} />
+              Contáctanos por WhatsApp
             </a>
           </div>
 
-          <div className="rounded-3xl bg-white/5 p-8 backdrop-blur">
-            <h3 className="mb-8 text-2xl font-semibold">
-              Información de contacto
-            </h3>
+          <div className="flex justify-center">
+            <div className="w-fit rounded-2xl bg-white/5 p-6 backdrop-blur">
+              <h3 className="mb-6 text-xl font-bold">
+                Información de contacto
+              </h3>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="rounded-xl bg-brandColor/15 p-3">
-                  <Mail className="text-brandColor" size={22} />
-                </div>
+              <div className="space-y-5">
+                {contactItems.map(({ icon: Icon, label, content, href }) => (
+                  <div key={label} className="flex items-center gap-4">
+                    {href ? (
+                      <a
+                        href={href}
+                        target={label === "LinkedIn" ? "_blank" : undefined}
+                        rel={
+                          label === "LinkedIn"
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                        className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brandColor/15 transition hover:bg-brandColor/25"
+                      >
+                        <Icon className="text-brandColor" size={22} />
+                      </a>
+                    ) : (
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brandColor/15">
+                        <Icon className="text-brandColor" size={22} />
+                      </div>
+                    )}
 
-                <div>
-                  <p className="text-sm text-slate-400">Email</p>
-                  <a
-                    href="mailto:info@alpasistemas.com"
-                    className="transition hover:text-brandColor"
-                  >
-                    info@alpasistemas.com
-                  </a>
-                </div>
-              </div>
+                    <div>
+                      <p className="text-sm text-slate-400">{label}</p>
 
-              <div className="flex items-start gap-4">
-                <div className="rounded-xl bg-brandColor/15 p-3">
-                  <Phone className="text-brandColor" size={22} />
-                </div>
-
-                <div>
-                  <p className="text-sm text-slate-400">Teléfono / WhatsApp</p>
-                  <a
-                    href="https://wa.me/5491133056461"
-                    className="transition hover:text-brandColor"
-                  >
-                    +54 9 11 3305-6461
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="rounded-xl bg-brandColor/15 p-3">
-                  <User className="text-brandColor" size={22} />
-                </div>
-
-                <div>
-                  <p className="text-sm text-slate-400">LinkedIn</p>
-                  <a
-                    href="https://www.linkedin.com/company/alpa-sistemas/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition hover:text-brandColor"
-                  >
-                    ALPA Sistemas
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="rounded-xl bg-brandColor/15 p-3">
-                  <MapPin className="text-brandColor" size={22} />
-                </div>
-
-                <div>
-                  <p className="text-sm text-slate-400">Ubicación</p>
-                  <p>Buenos Aires, Argentina</p>
-                </div>
+                      {href ? (
+                        <a
+                          href={href}
+                          target={label === "LinkedIn" ? "_blank" : undefined}
+                          rel={
+                            label === "LinkedIn"
+                              ? "noopener noreferrer"
+                              : undefined
+                          }
+                          className="transition hover:text-brandColor"
+                        >
+                          {content}
+                        </a>
+                      ) : (
+                        <p>{content}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

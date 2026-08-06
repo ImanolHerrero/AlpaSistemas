@@ -6,12 +6,7 @@ const services = [
     title: "ERP Full Web",
     description:
       "Implementamos soluciones ERP para optimizar la gestión de tu empresa, acompañándote en cada etapa del proyecto.",
-    items: [
-      "Implementación",
-      "Consultoría personalizada",
-      "Capacitación",
-      "Optimización de procesos",
-    ],
+    items: ["Implementación", "Consultoría", "Capacitación", "Optimización"],
   },
   {
     icon: Headset,
@@ -21,30 +16,30 @@ const services = [
     items: [
       "Seguimiento de tickets",
       "Soporte especializado",
-      "WhatsApp corporativo",
+      "WhatsApp",
       "Email",
       "Plataforma online",
-      "Documentación y manuales",
+      "Documentación",
     ],
   },
 ];
 
 export default function Services() {
   return (
-    <section id="servicios" className="bg-slate-50 py-24">
+    <section id="servicios" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="font-semibold uppercase tracking-widest text-brandColor">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <span className="font-semibold uppercase tracking-[0.2em] text-brandColor">
             Servicios
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-slate-900">
-            Soluciones pensadas para acompañar el crecimiento de tu empresa
+          <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-900">
+            Soluciones para impulsar el crecimiento de tu empresa
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Brindamos servicios especializados en implementación de ERP y
-            soporte técnico continuo para garantizar el éxito de cada proyecto.
+            Brindamos implementación, consultoría y soporte especializado para
+            ayudarte a optimizar la gestión de tu negocio con soluciones ERP.
           </p>
         </div>
 
@@ -52,32 +47,30 @@ export default function Services() {
           {services.map(({ icon: Icon, title, description, items }) => (
             <article
               key={title}
-              className="rounded-3xl border border-slate-200 bg-white p-10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brandColor"
+              className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brandColor hover:shadow-xl"
             >
-              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-brandColor/10 text-brandColor">
-                <Icon size={34} />
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-brandColor/10 text-brandColor transition-colors duration-300 group-hover:bg-brandColor group-hover:text-white">
+                <Icon size={28} />
               </div>
 
-              <h3 className="text-3xl font-bold text-slate-900">{title}</h3>
+              <h3 className="mb-4 text-xl font-bold text-slate-900">{title}</h3>
 
-              <p className="mt-4 text-lg leading-7 text-slate-600">
-                {description}
-              </p>
+              <p className="leading-7 text-slate-600">{description}</p>
 
-              <ul className="mt-8 space-y-4">
+              <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3">
                 {items.map((item) => (
-                  <li
+                  <div
                     key={item}
-                    className="flex items-center gap-3 text-slate-700"
+                    className="flex items-center gap-2 text-sm text-slate-700"
                   >
-                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-brandColor/15 text-brandColor">
-                      <Check size={16} />
+                    <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brandColor/10 text-brandColor">
+                      <Check size={14} />
                     </div>
 
                     <span>{item}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </article>
           ))}
         </div>
