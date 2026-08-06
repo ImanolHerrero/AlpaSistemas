@@ -41,9 +41,9 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Acompañamos a empresas en la implementación de soluciones ERP
-            brindando consultoría, soporte y un seguimiento cercano durante cada
-            etapa del proyecto.
+            Acompañamos a empresas en la implementación de soluciones ERP con
+            consultoría, soporte continuo y un compromiso a largo plazo basado
+            en la confianza y los resultados.
           </p>
         </div>
 
