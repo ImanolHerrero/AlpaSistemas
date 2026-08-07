@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import calipsoLogo from "../assets/LogoCalipso.png";
 import { BadgeCheck } from "lucide-react";
+import alpaRobot from "../assets/alpaRobot.jpeg";
 
 const features = [
   "Implementación y puesta en marcha",
@@ -30,13 +31,13 @@ export default function Partner() {
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
             Contamos con amplia experiencia en la implementación,
-            parametrización y soporte de Calipso ERP, acompañando a empresas en
-            la optimización de sus procesos mediante una solución moderna,
-            flexible y escalable.
+            parametrización y soporte de Calipso ERP Full Web, acompañando a
+            empresas en la optimización de sus procesos mediante una solución
+            moderna, flexible y escalable.
           </p>
         </motion.div>
 
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div className="grid items-center gap-8 lg:grid-cols-2">
           <motion.article
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,6 +63,11 @@ export default function Partner() {
                   <span className="leading-7 text-slate-700">{feature}</span>
                 </motion.div>
               ))}
+              <img
+                src={calipsoLogo}
+                alt="Calipso ERP"
+                className="h-14 w-auto object-contain mt-6"
+              />
             </div>
           </motion.article>
 
@@ -73,9 +79,9 @@ export default function Partner() {
             className="flex justify-center"
           >
             <img
-              src={calipsoLogo}
-              alt="Calipso ERP"
-              className="h-12 w-auto object-contain"
+              src={alpaRobot}
+              alt="ALPA Robot"
+              className="h-60 w-auto object-contain"
             />
           </motion.div>
         </div>

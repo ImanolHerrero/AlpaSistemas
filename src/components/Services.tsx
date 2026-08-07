@@ -21,6 +21,7 @@ const services = [
       "Email y plataforma online",
       "Prevención y mejora continua",
       "Documentación y manuales",
+      "Soporte correctivo y evolutivo",
     ],
   },
 ];
@@ -41,7 +42,7 @@ export default function Services() {
           </span>
 
           <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-900">
-            Soluciones para impulsar el crecimiento de tu empresa
+            Soluciones para impulsar el crecimiento de tu empresa.
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">

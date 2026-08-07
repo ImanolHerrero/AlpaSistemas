@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import logo from "../assets/alpaLogo.png";
+import logo from "../assets/logoAlpa2.jpeg";
 
 const links = [
   { label: "Inicio", href: "#hero" },

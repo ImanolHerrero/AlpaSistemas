@@ -1,6 +1,12 @@
 import { motion } from "motion/react";
 import { Mail, MapPin } from "lucide-react";
-import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+} from "react-icons/fa";
+import alpaRobot from "../assets/alpaRobot2.jpeg";
 
 const contactItems = [
   {
@@ -22,6 +28,18 @@ const contactItems = [
     href: "https://www.linkedin.com/company/alpa-sistemas/",
   },
   {
+    icon: FaInstagram,
+    label: "Instagram",
+    content: "@alpasistemascalipso",
+    href: "https://www.instagram.com/alpasistemascalipso/",
+  },
+  {
+    icon: FaFacebook,
+    label: "Facebook",
+    content: "ALPA Sistemas",
+    href: "https://www.facebook.com/profile.php?id=61561332731803",
+  },
+  {
     icon: MapPin,
     label: "Ubicación",
     content: "Buenos Aires, Argentina",
@@ -33,22 +51,20 @@ export default function Contact() {
     <section id="contacto" className="bg-slate-900 py-24 text-white">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
-          className="grid items-center gap-12 lg:grid-cols-2"
+          className="grid items-start gap-8 lg:grid-cols-2"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.4 }}
         >
           <motion.div
-            className="max-w-xl text-center lg:text-left"
+            className="flex flex-col items-center text-center lg:items-start lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
-            transition={{
-              duration: 0.6,
-            }}
+            transition={{ duration: 0.6 }}
           >
-            <span className="font-semibold uppercase tracking-[0.2em] text-brandColor">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-brandColor">
               Contacto
             </span>
 
@@ -71,10 +87,24 @@ export default function Contact() {
               <FaWhatsapp size={18} />
               Contáctanos por WhatsApp
             </a>
+
+            <motion.div
+              className="mt-8 flex w-full justify-center lg:justify-start"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+            >
+              <img
+                src={alpaRobot}
+                alt="ALPA Robot"
+                className="h-60 w-auto object-contain"
+              />
+            </motion.div>
           </motion.div>
 
           <motion.div
-            className="flex justify-center"
+            className="flex items-start justify-center lg:justify-end"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
@@ -102,12 +132,8 @@ export default function Contact() {
                       {href ? (
                         <a
                           href={href}
-                          target={label === "LinkedIn" ? "_blank" : undefined}
-                          rel={
-                            label === "LinkedIn"
-                              ? "noopener noreferrer"
-                              : undefined
-                          }
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brandColor/15 transition hover:bg-brandColor/25"
                         >
                           <Icon className="text-brandColor" size={22} />
@@ -124,12 +150,8 @@ export default function Contact() {
                         {href ? (
                           <a
                             href={href}
-                            target={label === "LinkedIn" ? "_blank" : undefined}
-                            rel={
-                              label === "LinkedIn"
-                                ? "noopener noreferrer"
-                                : undefined
-                            }
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="transition hover:text-brandColor"
                           >
                             {content}

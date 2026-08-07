@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
           </span>
 
           <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-900">
-            Experiencia, compromiso y tecnología para potenciar tu negocio
+            Experiencia, compromiso y tecnología para potenciar tu negocio.
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">

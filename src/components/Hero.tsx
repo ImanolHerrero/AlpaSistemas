@@ -1,5 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
-import alpaLogo from "../assets/alpaLogo.png";
+import alpaLogo from "../assets/logoAlpa2.jpeg";
 import calipsoLogo from "../assets/LogoCalipso.png";
 import systemSolutionsGroupLogo from "../assets/systemSolutionsGroupLogo.png";
 
@@ -19,6 +19,9 @@ function Hero() {
           <h1 className="mt-6 text-3xl font-bold leading-tight text-slate-900 lg:text-5xl">
             Potenciando tu gestión.{" "}
             <span className="text-brandColor">Simplificando tu futuro.</span>
+            <span className="block text-md mt-2 font-semibold lg:text-lg">
+              (Tenemos la habilidad de convertir lo difícil en fácil).
+            </span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
@@ -81,7 +84,7 @@ function Hero() {
             />
 
             <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-slate-600">
-              Partners tecnológicos
+              Una empresa del grupo:
             </p>
 
             <div className="mt-5 flex items-center justify-center gap-10">
