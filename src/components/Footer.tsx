@@ -3,12 +3,12 @@ import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
 import logo from "../assets/alpaLogo.png";
 
 const links = [
-  { label: "Inicio", href: "#hero" },
-  { label: "Beneficios", href: "#beneficios" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Proceso", href: "#proceso" },
-  { label: "Calipso ERP", href: "#partner" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "• Inicio", href: "#hero" },
+  { label: "• Beneficios", href: "#beneficios" },
+  { label: "• Servicios", href: "#servicios" },
+  { label: "• Proceso", href: "#proceso" },
+  { label: "• Calipso ERP", href: "#partner" },
+  { label: "• Contacto", href: "#contacto" },
 ];
 
 const contactItems = [
