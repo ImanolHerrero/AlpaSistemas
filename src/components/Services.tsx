@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { MonitorCog, Headset, Check } from "lucide-react";
 
 const services = [
@@ -26,9 +27,15 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="bg-white py-24">
+    <section id="servicios" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto mb-12 max-w-3xl text-center">
+        <motion.div
+          className="mx-auto mb-16 max-w-3xl text-center"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="font-semibold uppercase tracking-[0.2em] text-brandColor">
             Servicios
           </span>
@@ -42,12 +49,19 @@ export default function Services() {
             ayudarte a optimizar la gestión de tu negocio con soluciones Calipso
             ERP.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid gap-8 lg:grid-cols-2">
-          {services.map(({ icon: Icon, title, description, items }) => (
-            <article
+          {services.map(({ icon: Icon, title, description, items }, index) => (
+            <motion.article
               key={title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15,
+              }}
               className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brandColor hover:shadow-xl"
             >
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-brandColor/10 text-brandColor transition-colors duration-300 group-hover:bg-brandColor group-hover:text-white">
@@ -59,9 +73,16 @@ export default function Services() {
               <p className="leading-7 text-slate-600">{description}</p>
 
               <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3">
-                {items.map((item) => (
-                  <div
+                {items.map((item, itemIndex) => (
+                  <motion.div
                     key={item}
+                    initial={{ opacity: 0, x: -12 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.35,
+                      delay: index * 0.15 + itemIndex * 0.05 + 0.25,
+                    }}
                     className="flex items-center gap-2 text-sm text-slate-700"
                   >
                     <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brandColor/10 text-brandColor">
@@ -69,10 +90,10 @@ export default function Services() {
                     </div>
 
                     <span>{item}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

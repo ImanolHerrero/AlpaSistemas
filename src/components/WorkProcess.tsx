@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { ClipboardList, Wrench, GraduationCap, Headset } from "lucide-react";
 
 const steps = [
@@ -35,7 +36,13 @@ export default function WorkProcess() {
   return (
     <section id="proceso" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto mb-16 max-w-3xl text-center">
+        <motion.div
+          className="mx-auto mb-16 max-w-3xl text-center"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="font-semibold uppercase tracking-[0.2em] text-brandColor">
             Nuestro proceso
           </span>
@@ -49,12 +56,19 @@ export default function WorkProcess() {
             exitosa, minimizando riesgos y asegurando el máximo aprovechamiento
             de tu sistema ERP.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {steps.map(({ icon: Icon, number, title, description }) => (
-            <article
+          {steps.map(({ icon: Icon, number, title, description }, index) => (
+            <motion.article
               key={number}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.2 + index * 0.08,
+              }}
               className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brandColor hover:shadow-xl"
             >
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-brandColor/10 text-brandColor transition-colors duration-300 group-hover:bg-brandColor group-hover:text-white">
@@ -70,7 +84,7 @@ export default function WorkProcess() {
               </h3>
 
               <p className="leading-7 text-slate-600">{description}</p>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>
