@@ -87,19 +87,19 @@ function Hero() {
               Una empresa del grupo:
             </p>
 
-            <div className="mt-5 flex items-center justify-center gap-10">
-              <img
-                src={calipsoLogo}
-                alt="Calipso ERP"
-                loading="eager"
-                className="h-10 w-auto object-contain"
-              />
-
+            <div className="mt-5 flex items-center flex-col justify-center gap-10">
               <img
                 src={systemSolutionsGroupLogo}
                 alt="System Solutions Group"
                 loading="eager"
                 className="h-10 w-auto object-contain"
+              />
+
+              <img
+                src={calipsoLogo}
+                alt="Calipso ERP"
+                loading="eager"
+                className="h-14 w-auto object-contain"
               />
             </div>
           </div>

@@ -1,6 +1,11 @@
-import { Mail, MapPin } from "lucide-react";
-import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
-import logo from "../assets/alpaLogo.png";
+import { Mail } from "lucide-react";
+import {
+  FaWhatsapp,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
+import logo from "../assets/logoAlpa2.jpeg";
 
 const links = [
   { label: "• Inicio", href: "#hero" },
@@ -14,7 +19,8 @@ const links = [
 const contactItems = [
   {
     icon: Mail,
-    label: "info@alpasistemas.com",
+    label: "Email",
+    content: "info@alpasistemas.com",
     href: "mailto:info@alpasistemas.com",
   },
   {
@@ -24,12 +30,18 @@ const contactItems = [
   },
   {
     icon: FaLinkedin,
-    label: "LinkedIn",
+    label: "ALPA Sistemas",
     href: "https://www.linkedin.com/company/alpa-sistemas/",
   },
   {
-    icon: MapPin,
-    label: "Buenos Aires, Argentina",
+    icon: FaInstagram,
+    label: "@alpasistemascalipso",
+    href: "https://www.instagram.com/alpasistemascalipso/",
+  },
+  {
+    icon: FaFacebook,
+    label: "ALPA Sistemas",
+    href: "https://www.facebook.com/profile.php?id=61561332731803",
   },
 ];
 
@@ -42,7 +54,7 @@ export default function Footer() {
             <img
               src={logo}
               alt="ALPA Sistemas"
-              className="mx-auto mb-4 h-10 w-auto lg:mx-0"
+              className="mx-auto mb-4 h-16 w-auto lg:mx-0"
             />
 
             <p className="mx-auto max-w-md leading-6 text-slate-600 lg:mx-0 lg:max-w-sm">
