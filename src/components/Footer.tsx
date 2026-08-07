@@ -5,6 +5,7 @@ import {
   FaFacebook,
   FaInstagram,
 } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import logo from "../assets/logoAlpa2.jpeg";
 
 const links = [
@@ -42,6 +43,11 @@ const contactItems = [
     icon: FaFacebook,
     label: "ALPA Sistemas",
     href: "https://www.facebook.com/profile.php?id=61561332731803",
+  },
+  {
+    icon: FaSquareXTwitter,
+    label: "@alpasistemas",
+    href: "https://x.com/Alpasistemas",
   },
 ];
 

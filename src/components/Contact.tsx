@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaFacebook,
 } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import alpaRobot from "../assets/alpaRobot2.jpeg";
 
 const contactItems = [
@@ -38,6 +39,12 @@ const contactItems = [
     label: "Facebook",
     content: "ALPA Sistemas",
     href: "https://www.facebook.com/profile.php?id=61561332731803",
+  },
+  {
+    icon: FaSquareXTwitter,
+    label: "Twitter",
+    content: "@alpasistemas",
+    href: "https://x.com/Alpasistemas",
   },
   {
     icon: MapPin,
