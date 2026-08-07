@@ -24,7 +24,7 @@ function Hero() {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
             En ALPA SISTEMAS ayudamos a empresas a optimizar sus procesos
             mediante consultoría, implementación y soporte especializado en
-            sistemas ERP Full Web, acompañando cada proyecto desde su
+            sistemas Calipso ERP Full Web, acompañando cada proyecto desde su
             planificación hasta su puesta en marcha.
           </p>
 

@@ -3,9 +3,9 @@ import { MonitorCog, Headset, Check } from "lucide-react";
 const services = [
   {
     icon: MonitorCog,
-    title: "ERP Full Web",
+    title: "ERP Calipso Full Web",
     description:
-      "Implementamos soluciones ERP para optimizar la gestión de tu empresa, acompañándote en cada etapa del proyecto.",
+      "Implementamos soluciones Calipso ERP para optimizar la gestión de tu empresa, acompañándote en cada etapa del proyecto.",
     items: ["Implementación", "Consultoría", "Capacitación", "Optimización"],
   },
   {
@@ -39,7 +39,8 @@ export default function Services() {
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
             Brindamos implementación, consultoría y soporte especializado para
-            ayudarte a optimizar la gestión de tu negocio con soluciones ERP.
+            ayudarte a optimizar la gestión de tu negocio con soluciones Calipso
+            ERP.
           </p>
         </div>
 

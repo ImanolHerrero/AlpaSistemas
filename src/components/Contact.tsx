@@ -43,7 +43,7 @@ export default function Contact() {
 
             <p className="mt-6 text-lg leading-8 text-slate-300">
               Nuestro equipo está preparado para asesorarte en la
-              implementación, consultoría y soporte de soluciones ERP.
+              implementación, consultoría y soporte de soluciones Calipso ERP.
               Contactanos y conversemos sobre las necesidades de tu empresa.
             </p>
 
